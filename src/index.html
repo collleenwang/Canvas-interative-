@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <style>
+          .container {
+            max-width: 60rem;
+          }
+
+          .sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+          }
+
+          h1 {
+            text-align: center;
+          }
+
+          p small {
+            background: #fff880;
+          }
+
+          .colored-text {
+            padding: 1px 7px;
+            display: inline-block;
+          }
+        </style>
+        <style>
+          /* Highlight steps when you scroll into them */
+          /* You can delete this one! */
+/*          .step.entered {
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-transition: 1.5s background;
+            -moz-transition: 1.5s background;
+            transition: 1.5s background;
+            background: #fff888;
+          }*/
+
+          /* Set the sticky things 2% from the top */
+          .sticky {
+            top: 0vh;
+            align-self: flex-start;  
+          }
+
+          /* Minimum height of 70% of the screen */
+          .step {
+            min-height: 75vh;
+          }
+
+          .step > p {
+            background: rgba(255,255,255,0.9);
+            padding: 10px 0;
+            margin-bottom: 0;
+            padding-bottom: 1rem;
+          }
+        </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 mt-5 mb-5">
+          <h1>✨✨ F A N C Y ✨✨ C A N V A S ✨✨</h1>
+          <p>For those times when you just have <em>so many points</em> but for some reason don't want to be a legitimate journalist who condenses information for the reader.</p>
+        </div>
+      </div>
+
+
+
+
+
+
+      <div class="row mt-5 mb-5">
+        <div class="col-sm-12">
+            <h2>Making a map</h2>
+            <p>This is easy!</p>
+        </div>
+        <div class="col-lg-12">
+          <div id="chart-1"></div>
+        </div>
+      </div>
+
+
+
+
+
+
+      <div class="row mt-5">
+        <div class="col-sm-12">
+          <h2>Hover events: The color method</h2>
+          <p>We make a second (fake!) canvas, draw everything in a different color, and then look up the color based on the pixels. It's weird.</p>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-12">
+          <div id="chart-2"></div>
+        </div>
+      </div>
+
+
+      <div class="row mt-5">
+        <div class="col-sm-12">
+          <h2>Hover events: The voronoi method</h2>
+          <p>We use <a href="https://github.com/d3/d3-delaunay">d3-delaunay</a> to detect the closest circle</p>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-12">
+          <div id="chart-3">
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <script src="01-map.js"></script>
+    <script src="02-hover-colors.js"></script>
+    <script src="03-hover-voronoi-faster.js"></script>
+    <script src="scrollytelling.js"></script>
+
+   </body>
+</html>
